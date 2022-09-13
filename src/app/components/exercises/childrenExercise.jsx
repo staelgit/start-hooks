@@ -3,12 +3,10 @@ import CollapseWrapper from "../common/collapse";
 import PropTypes from "prop-types";
 
 const ComponentsList = ({ children }) => {
-   let order = 0;
-   return React.Children.map(children, (child) => {
-      order += 1;
+   return React.Children.map(children, (child, index) => {
       return React.cloneElement(child, {
          ...child.props,
-         order
+         order: index + 1
       });
    });
 
