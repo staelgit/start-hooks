@@ -6,7 +6,7 @@ const UseRefExercise = () => {
    const handleClick = () => {
       inputPef.current.style.width = "150px";
       inputPef.current.style.height = "80px";
-      inputPef.current.querySelector("small").innerHTML = "text";
+      inputPef.current.children[0].innerHTML = "text";
    };
 
    return (
